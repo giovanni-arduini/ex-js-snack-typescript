@@ -37,3 +37,10 @@ type ProjectManager = Dipendente & {
   budgetGestito?: number;
   stakeholderPrincipali: string[];
 };
+
+type Team = {
+  nome: string;
+  progettoAttuale: string | null;
+  budget: number;
+  membri: [ProjectManager, Developer, ...Developer[]];
+};
