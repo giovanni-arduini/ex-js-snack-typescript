@@ -17,11 +17,23 @@ if (typeof data === "string") {
 } else console.log("Tipo non supportato");
 
 type Dipendente = {
-  nome: "string";
-  cognome: "string";
+  nome: string;
+  cognome: string;
   annoNascita: number;
   sesso: "m" | "f";
   anniDiServizio: number[];
-  readonly emailAziendale: "string";
+  readonly emailAziendale: string;
   contratto: "indeterminato" | "determinato" | "freelance";
+};
+
+type Developer = Dipendente & {
+  livelloEsperienza: "Junior" | "Mid" | "Senior";
+  linguaggi?: string[];
+  certificazioni: string[];
+};
+
+type ProjectManager = Dipendente & {
+  teamSize: number | null;
+  budgetGestito?: number;
+  stakeholderPrincipali: string[];
 };
