@@ -15,3 +15,13 @@ if (typeof data === "string") {
 } else if (data instanceof Promise) {
   data.then((res) => console.log(res));
 } else console.log("Tipo non supportato");
+
+type Dipendente = {
+  nome: "string";
+  cognome: "string";
+  annoNascita: number;
+  sesso: "m" | "f";
+  anniDiServizio: number[];
+  readonly emailAziendale: "string";
+  contratto: "indeterminato" | "determinato" | "freelance";
+};
