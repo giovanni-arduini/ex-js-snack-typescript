@@ -1,24 +1,11 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+// Ts Snack 1
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+let data: unknown;
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+if (typeof data === "string") {
+  console.log(data.toUpperCase());
+} else if (typeof data === "number") {
+  console.log(data * 2);
+} else if (typeof data === "boolean") {
+  data = true ? console.log("Yes") : console.log("No");
+} else console.log("Tipo non supportato");
